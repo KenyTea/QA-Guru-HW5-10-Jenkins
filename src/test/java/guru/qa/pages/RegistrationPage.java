@@ -16,7 +16,7 @@ public class RegistrationPage {
 
     // locators and elements
     private final String FORM_TITLE = "Student Registration Form";
-    private SelenideElement
+    private final SelenideElement
             studentRegistrationForm = $(byText(FORM_TITLE)),
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
