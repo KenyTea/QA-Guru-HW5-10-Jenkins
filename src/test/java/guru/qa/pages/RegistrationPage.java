@@ -4,7 +4,6 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import guru.qa.components.CalendarComponent;
 
-import java.io.File;
 import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.text;
@@ -90,7 +89,6 @@ public class RegistrationPage {
 
     public RegistrationPage setPicture(String fileName) {
         // Загрузка картинки
-        //uploadPicture.uploadFile(new File(fileName));
         uploadPicture.uploadFromClasspath(fileName);
         return this;
     }
