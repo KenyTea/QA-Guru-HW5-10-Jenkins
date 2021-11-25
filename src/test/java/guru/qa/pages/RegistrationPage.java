@@ -90,7 +90,8 @@ public class RegistrationPage {
 
     public RegistrationPage setPicture(String fileName) {
         // Загрузка картинки
-        uploadPicture.uploadFile(new File(fileName));
+        //uploadPicture.uploadFile(new File(fileName));
+        uploadPicture.uploadFromClasspath(fileName);
         return this;
     }
 
