@@ -47,9 +47,9 @@ public class HomeWork5_10 extends TestBase {
                 registrationPage.hobbySelect("Sports");
             });
             step("Загрузка файла", () -> {
-                //registrationPage.setPicture("p1.png");
-                registrationPage.setPicture("img/" + picture);
-                registrationPage.setPicture("img\\" + picture);
+                registrationPage.setPicture("p1.png");
+                //registrationPage.setPicture("img/" + picture);
+                //registrationPage.setPicture("img\\" + picture);
             });
             step("Заполнение поля адресс", () -> {
                 registrationPage.setCurrentAddress(randomFaker.address);
