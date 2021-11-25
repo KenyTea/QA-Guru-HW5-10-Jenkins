@@ -8,6 +8,7 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
 
@@ -47,9 +48,10 @@ public class HomeWork5_10 extends TestBase {
                 registrationPage.hobbySelect("Sports");
             });
             step("Загрузка файла", () -> {
-                registrationPage.setPicture("p1.png");
+                //registrationPage.setPicture("p1.png");
                 //registrationPage.setPicture("img/" + picture);
                 //registrationPage.setPicture("img\\" + picture);
+                $("#uploadPicture").uploadFromClasspath("img/" + picture);
             });
             step("Заполнение поля адресс", () -> {
                 registrationPage.setCurrentAddress(randomFaker.address);
