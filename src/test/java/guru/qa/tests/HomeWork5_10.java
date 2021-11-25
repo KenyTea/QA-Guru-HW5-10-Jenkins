@@ -14,6 +14,8 @@ import static io.qameta.allure.Allure.step;
 public class HomeWork5_10 extends TestBase {
 
     private final String URL = "https://demoqa.com/automation-practice-form";
+    private final String picture = "p1.png";
+
 
     @Owner("KenyTae")
     @Feature("Заполнение регистрационной формы")
@@ -46,7 +48,7 @@ public class HomeWork5_10 extends TestBase {
             });
             step("Загрузка файла", () -> {
                 //registrationPage.setPicture("p1.png");
-                registrationPage.setPicture("resources/p1.png");
+                registrationPage.setPicture("img/" + picture);
             });
             step("Заполнение поля адресс", () -> {
                 registrationPage.setCurrentAddress(randomFaker.address);
