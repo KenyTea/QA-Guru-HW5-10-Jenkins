@@ -48,7 +48,7 @@ public class HomeWork5_10 extends TestBase {
             });
             step("Загрузка файла", () -> {
                 //registrationPage.setPicture("p1.png");
-                //registrationPage.setPicture("img/" + picture);
+                registrationPage.setPicture("img/" + picture);
                 registrationPage.setPicture("img\\" + picture);
             });
             step("Заполнение поля адресс", () -> {
