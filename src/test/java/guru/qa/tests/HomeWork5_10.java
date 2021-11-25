@@ -8,10 +8,6 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 
@@ -58,9 +54,6 @@ public class HomeWork5_10 extends TestBase {
                 registrationPage
                         .setState("NCR") // Select state
                         .setCity("Gurgaon"); //Select City
-            });
-            step("Нажатие кнопки Subjects", () -> {
-                registrationPage.setSubmit();
             });
         });
         step("Нажименм кнопку Subjects", () -> {
