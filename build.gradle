@@ -39,7 +39,7 @@ tasks.withType(JavaCompile) {
 
 tasks.withType(Test) {
     //systemProperty("browserSize", System.property("browserSize", "400 400")) // Можно задавать здесь
-    systepProperties(System.getProperties()) // Запустить с параметрами
+    systemProperties(System.getProperties()) // Запустить с параметрами
     useJUnitPlatform()
 
     testLogging {
