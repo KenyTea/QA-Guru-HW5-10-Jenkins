@@ -15,6 +15,8 @@ public class TestBase {
     public RegistrationPage registrationPage = new RegistrationPage();
     public RandomFaker randomFaker = new RandomFaker();
 
+
+
     @BeforeAll
     static void setup() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
