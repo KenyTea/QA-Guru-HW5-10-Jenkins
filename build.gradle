@@ -38,6 +38,8 @@ tasks.withType(JavaCompile) {
 }
 
 tasks.withType(Test) {
+    //systemProperty("browserSize", System.property("browserSize", "400 400")) // Можно задавать здесь
+    systepProperties(System.getProperties()) // Запустить с параметрами
     useJUnitPlatform()
 
     testLogging {
@@ -46,5 +48,19 @@ tasks.withType(Test) {
             events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
         }
+    }
+}
+
+task properties_test(type: Test){  // Запускать только с @Tag("properties")
+    useJUnitPlatform{
+        includeTags "properties"
+    }
+}
+
+task many_test(type: Test){  // Запускать несколько тестов с @Tag("properties") @Tag("testss")
+    useJUnitPlatform{
+        includeTags "properties"
+        includeTags "testss"
+        excludeTags "Prod"
     }
 }

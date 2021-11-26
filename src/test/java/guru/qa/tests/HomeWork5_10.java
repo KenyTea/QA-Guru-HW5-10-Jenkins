@@ -6,6 +6,7 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -21,6 +22,7 @@ public class HomeWork5_10 extends TestBase {
     @Feature("Заполнение регистрационной формы")
     @Story("Issues")
     @DisplayName("Lambda test")
+    @Tag("Properties")
     @Test
     void studentsRegistration() {
 
