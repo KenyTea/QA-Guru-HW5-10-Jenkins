@@ -26,6 +26,9 @@ public class HomeWork5_10 extends TestBase {
     @Test
     void studentsRegistration() {
 
+        //Проект QA.Guru9_HW10RegistrationFormJenkins
+        //Проект QA.Guru9_HW11RegistrationFormJenkin
+
         step("Открываем страницы браузер " + URL + " ", () -> {
             registrationPage.openPage(URL);
         });
