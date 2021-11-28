@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 public class SystemPropertiesTest {
 
-    @Disabled
+
     @Test
     @Tag("properties")
     void someTest5() {
