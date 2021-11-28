@@ -45,6 +45,8 @@ public class HomeWork5_10 extends TestBase {
         2.2 Подготовить код, чтобы на ваши тесты коллега сделал сборку с дженкинс.
          */
 
+        System.out.println("Запуск в Selenoid с параметрами");
+
         step("Открываем страницы браузер " + URL + " ", () -> {
             registrationPage.openPage(URL);
         });
