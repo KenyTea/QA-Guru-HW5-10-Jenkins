@@ -18,7 +18,7 @@ public class HomeWork5_10 extends TestBase {
     private final String URL = "https://demoqa.com/automation-practice-form";
     private final String picture = "p1.png";
 
-    @Disabled
+
     @Owner("KenyTae")
     @Feature("Заполнение регистрационной формы")
     @Story("Issues")
