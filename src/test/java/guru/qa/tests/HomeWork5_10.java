@@ -1,10 +1,12 @@
 package guru.qa.tests;
 
 
+import guru.qa.config.CredentialsConfig;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -17,6 +19,7 @@ public class HomeWork5_10 extends TestBase {
 
     private final String URL = "https://demoqa.com/automation-practice-form";
     private final String picture = "p1.png";
+
 
 
 
