@@ -21,9 +21,15 @@ public class TestBase {
     static void setup() {
 
         //String remoteUrl = System.getProperty("selenoidUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub/");
-        String user = "user1";
-        String pass = "1234";
+        String user = System.getProperty("user1", "user1");
+        String pass = System.getProperty("1234", "1234");
+
+        //String user = "user1";
+        //String pass = "1234";
         String remoteUrl = "https://" + user + ":" + pass + "@selenoid.autotests.cloud/wd/hub/";
+
+        // clean test -Duser=user1 -Dpass=1234
+
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.startMaximized = true;
