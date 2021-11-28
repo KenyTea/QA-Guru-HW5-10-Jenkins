@@ -22,5 +22,4 @@ public class CalendarComponent {
         yearSelect.selectOptionByValue(year);
         daySelect.find(text(day)).click();
     }
-
 }

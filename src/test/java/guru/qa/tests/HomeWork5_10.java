@@ -1,6 +1,5 @@
 package guru.qa.tests;
 
-
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
@@ -10,12 +9,9 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
-
 public class HomeWork5_10 extends TestBase {
-
     private final String URL = "https://demoqa.com/automation-practice-form";
     private final String picture = "p1.png";
-
 
     @Owner("KenyTae")
     @Feature("Заполнение регистрационной формы")
@@ -23,14 +19,13 @@ public class HomeWork5_10 extends TestBase {
     @DisplayName("Lambda test")
     @Test
     void studentsRegistration() {
-
         step("Открываем страницы браузер " + URL + " ", () -> {
             registrationPage.openPage(URL);
         });
         step("Заполнение регистрационной формы", () -> {
             step("Заполнение основной информации", () -> {
                 registrationPage
-                        //.openPage(URL) // Открываем браузер и проверяем что страница загрузилась
+//                        .openPage(URL) // Открываем браузер и проверяем что страница загрузилась
                         .setFirstName(randomFaker.firstName) // Заполняем поле firstName
                         .setLastName(randomFaker.lastName) // Заполняем поле lastName
                         .setEmail("qa.guru@gmail.com") // Заполняем поле email
@@ -58,7 +53,7 @@ public class HomeWork5_10 extends TestBase {
                         .setCity("Gurgaon"); //Select City
             });
         });
-        step("Нажименм кнопку Subjects", () -> {
+        step("Нажимаем кнопку Subjects", () -> {
             registrationPage.setSubmit();
         });
         step("Валидация заполнения формы", () -> {
@@ -74,7 +69,5 @@ public class HomeWork5_10 extends TestBase {
                     .validate("Address", randomFaker.address)
                     .validate("State and City", "NCR Gurgaon");
         });
-
     }
-
 }
