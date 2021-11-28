@@ -5,6 +5,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -22,12 +23,26 @@ public class HomeWork5_10 extends TestBase {
     @Feature("Заполнение регистрационной формы")
     @Story("Issues")
     @DisplayName("Lambda test")
-    @Tag("Properties")
+    @Tag("Lambda test")
     @Test
     void studentsRegistration() {
 
         //Проект QA.Guru9_HW10RegistrationFormJenkins
         //Проект QA.Guru9_HW11RegistrationFormJenkin
+
+        /*
+        1. Доработать свой код:
+
+        1.1 Передать из дженкинса адрес удаленного браузера
+
+        1.2 Спрятать логин/пароль к удаленному браузеру в .properties файл, считывать его нужно в коде с owner
+
+        2. Групповое дз:
+
+        2.1 Сделать сборку в дженкинсе на код коллеги (тест должен успешно пройти)
+
+        2.2 Подготовить код, чтобы на ваши тесты коллега сделал сборку с дженкинс.
+         */
 
         step("Открываем страницы браузер " + URL + " ", () -> {
             registrationPage.openPage(URL);

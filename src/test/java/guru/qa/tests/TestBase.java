@@ -19,9 +19,16 @@ public class TestBase {
 
     @BeforeAll
     static void setup() {
+
+        //String remoteUrl = System.getProperty("selenoidUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub/");
+        String user = "user1";
+        String pass = "1234";
+        String remoteUrl = "https://" + user + ":" + pass + "@selenoid.autotests.cloud/wd/hub/";
+
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.startMaximized = true;
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
+        //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
+        Configuration.remote = remoteUrl;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);

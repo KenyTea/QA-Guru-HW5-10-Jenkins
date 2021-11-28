@@ -27,6 +27,7 @@ dependencies {
             "com.codeborne:selenide:$selenideVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
             "com.github.javafaker:javafaker:1.0.2",
+            "org.aeonbits.owner:owner:1.0.12",
             "org.junit.jupiter:junit-jupiter-api:$junitVersion")
     testRuntimeOnly(
             "org.slf4j:slf4j-simple:1.7.32",
@@ -51,16 +52,22 @@ tasks.withType(Test) {
     }
 }
 
-task properties_test(type: Test){  // Запускать только с @Tag("properties")
-    useJUnitPlatform{
-        includeTags "properties"
-    }
-}
-
-task many_test(type: Test){  // Запускать несколько тестов с @Tag("properties") @Tag("testss")
-    useJUnitPlatform{
-        includeTags "properties"
-        includeTags "testss"
-        excludeTags "Prod"
-    }
-}
+//task properties_test(type: Test){  // Запускать только с @Tag("properties")
+//    useJUnitPlatform{
+//        includeTags "properties"
+//    }
+//}
+//
+//task lambda_test(type: Test){  // Запускать только с @Tag("properties")
+//    useJUnitPlatform{
+//        includeTags "Lambda test"
+//    }
+//}
+//
+//task many_test(type: Test){  // Запускать несколько тестов с @Tag("properties") @Tag("testss")
+//    useJUnitPlatform{
+//        includeTags "properties"
+//        includeTags "testss"
+//        excludeTags "Prod"
+//    }
+//}
