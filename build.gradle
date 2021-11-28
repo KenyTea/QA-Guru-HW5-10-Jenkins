@@ -52,18 +52,18 @@ tasks.withType(Test) {
     }
 }
 
-//task properties_test(type: Test){  // Запускать только с @Tag("properties")
-//    useJUnitPlatform{
-//        includeTags "properties"
-//    }
-//}
-//
-//task lambda_test(type: Test){  // Запускать только с @Tag("properties")
-//    useJUnitPlatform{
-//        includeTags "Lambda test"
-//    }
-//}
-//
+task properties_test(type: Test){  // Запускать только с @Tag("properties")
+    useJUnitPlatform{
+        includeTags "properties"
+    }
+}
+
+task lambda_test(type: Test){  // Запускать только с @Tag("properties")
+    useJUnitPlatform{
+        includeTags "Lambda test"
+    }
+}
+
 //task many_test(type: Test){  // Запускать несколько тестов с @Tag("properties") @Tag("testss")
 //    useJUnitPlatform{
 //        includeTags "properties"
