@@ -42,7 +42,7 @@ tasks.withType(Test) {
     //systemProperty("browserSize", System.property("browserSize", "400 400")) // Можно задавать здесь
     systemProperties(System.getProperties()) // Запустить с параметрами
     useJUnitPlatform()
-    System.setProperty("Url", "$Url")
+    //System.setProperty("Url", "$Url")
 
     testLogging {
         lifecycle {
