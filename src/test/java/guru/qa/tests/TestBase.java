@@ -30,6 +30,8 @@ public class TestBase {
 
         // clean test -Duser=user1 -Dpass=1234
 
+        System.out.println("Запуск в Selenoid с параметрами");
+
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.startMaximized = true;
